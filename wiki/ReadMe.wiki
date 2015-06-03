@@ -1,0 +1,51 @@
+#summary ReadMe information
+
+----
+=General Information=
+----
+lightning-format is a tool for formatting text file source code.
+It supports languages such as C, C++, C#, and Java.
+Other Languages with similar formats can also be formatted.
+More info at <http://code.google.com/p/lightning-tools>
+
+Usage:
+	`lformat [source]`
+		-formats and overwrites source file leaving a backup file
+	`lformat [source] [dest]`
+		-formats source file and saves in dest
+
+	`--copying` 	-Displays copyright information
+	`--display` 		-Displays current options
+	`--edit` 		-Edit the options file
+	`--help` 		-Displays this help content
+	
+	Please give credit where credit is due, and not remove the signature 
+	line from your source code. It looks like: 
+	/*This code was formatted using lightning-format V2.0*/
+
+
+----
+=COPYRIGHT INFORMATION=
+----
+	COPYRIGHT 2010, 2011 TROY MASS
+
+	lightning-format is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	lightning-format is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with lightning-format. If not, see <http://www.gnu.org/licenses/>.
+	
+	Please give credit where credit is due, and not remove the signature 
+	line from your source code. It looks like: 
+	/*This code was formatted using lightning-format V2.0*/
+
+		lightning-format version: 2.0
+		COPYRIGHT (C) 2010, 2011 Troy Mass
+		License GPLv3+: <http://www.gnu.org/licenses/gpl.html>

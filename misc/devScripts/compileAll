@@ -1,0 +1,71 @@
+#!/bin/bash
+#
+#	COPYRIGHT 2010, 2011 TROY MASS
+#	
+#	This file is part of lightning-format.
+#
+#	lightning-format is free software: you can redistribute it and/or modify
+#	it under the terms of the GNU General Public License as published by
+#	the Free Software Foundation, either version 3 of the License, or
+#	(at your option) any later version.
+#
+#	lightning-format is distributed in the hope that it will be useful,
+#	but WITHOUT ANY WARRANTY; without even the implied warranty of
+#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#	GNU General Public License for more details.
+#
+#	You should have received a copy of the GNU General Public License
+#	along with lightning-format. If not, see <http://www.gnu.org/licenses/>.
+#
+
+#This compiles tFormat for both Windows and Linux
+
+#Windows compilers
+#i586-mingw32msvc-gcc	mingw32gcc
+#i586-mingw32msvc-g++	mingw32g++
+#amd64-mingw32msvc-gcc	mingw64gcc
+
+Files="main.cpp functions.cpp classes.cpp parser.cpp parseLine.cpp options.cpp"
+Exename="lightning-format"
+
+#BACKUP
+if [ -f "$Exename" ] ; then
+	rm "x$Exename"
+	mv "$Exename" "x$Exename"
+	if [ -f "x$Exename" ] ; then
+		echo "Backed up linux"
+	else
+		echo "linux Backup failed!"
+	fi
+fi
+
+#BACKUP
+if [ -f "$Exename.exe" ] ; then
+	rm "x$Exename.exe"
+	mv "$Exename.exe" "x$Exename.exe"
+	if [ -f "x$Exename.exe" ] ; then
+		echo "Backed up windows"
+	else
+		echo "windows Backup failed!"
+	fi
+fi
+
+#█
+echo "██████████████████████████████████████████████████████████████████████████████"
+#COMPILE
+echo "Compiling linux..."
+g++ -combine $Files -o $Exename
+if [ -f "$Exename" ] ; then
+	echo "Done!"
+else
+	echo "Linux Compile failed!"
+fi
+#COMPILE
+echo "██████████████████████████████████████████████████████████████████████████████"
+echo "Compiling windows..."
+mingw32g++ -combine $Files -o "$Exename.exe"
+if [ -f "$Exename.exe" ] ; then
+	echo "Done!"
+else
+	echo "Windows Compile failed!"
+fi

@@ -1,0 +1,34 @@
+#!/bin/bash
+#
+#This compiles tFormat for Windows
+
+#Windows compilers
+#i586-mingw32msvc-gcc	mingw32gcc
+#i586-mingw32msvc-g++	mingw32g++
+#amd64-mingw32msvc-gcc	mingw64gcc
+
+Files="main.cpp functions.cpp classes.cpp parser.cpp parseLine.cpp options.cpp"
+Exename="lightning-format"
+
+#BACKUP
+if [ -f "$Exename.exe" ] ; then
+	rm "x$Exename.exe"
+	mv "$Exename.exe" "x$Exename.exe"
+	if [ -f "x$Exename.exe" ] ; then
+		echo "Backed up windows"
+	else
+		echo "windows Backup failed!"
+	fi
+fi
+
+#COMPILE
+echo "██████████████████████████████████████████████████████████████████████████████"
+echo "Compiling windows..."
+mingw32g++ -combine $Files -o "$Exename.exe"
+if [ -f "$Exename.exe" ] ; then
+	echo "█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-"
+	echo "Not running the windows exe"
+	cp ./lightning-format.exe ~/T_Drive/lightning-format.exe
+else
+	echo "Windows Compile failed!"
+fi

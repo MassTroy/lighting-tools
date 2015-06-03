@@ -1,0 +1,34 @@
+#!/bin/bash
+#
+#This compiles tFormat for Linux
+
+Files="main.cpp functions.cpp classes.cpp parser.cpp parseLine.cpp options.cpp"
+Exename="lightning-format"
+
+#BACKUP
+if [ -f "$Exename" ] ; then
+	rm "x$Exename"
+	mv "$Exename" "x$Exename"
+	if [ -f "x$Exename" ] ; then
+		echo "Backed up linux"
+	else
+		echo "linux Backup failed!"
+	fi
+fi
+
+#█
+echo "██████████████████████████████████████████████████████████████████████████████"
+#COMPILE
+echo "Compiling linux..."
+g++ -combine $Files -o $Exename
+if [ -f "$Exename" ] ; then
+	echo "█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-█-"
+	if [ $# -ge "1" ] ; then
+		./lightning-format $@
+	else
+		./lightning-format test.cpp testa.cpp
+	fi
+else
+	echo "Linux Compile failed!"
+fi
+

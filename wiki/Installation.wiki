@@ -1,0 +1,43 @@
+#summary Installation instructions: Windows / Linux
+
+------------------------------------------------------------------------
+=Installation Instructions - Linux=
+------------------------------------------------------------------------
+==Easy Instructions==
+ # Open the linux folder and run the file "SETUP.sh"
+ # Type in your password to allow root access
+==Easy Instructions (all users)==
+ # Open a terminal in the linux folder and run  "sudo SETUP.sh"
+==Manual Installation (single user)==
+ # Copy "lightning-format" to /usr/bin/
+ # Open your home folder and create a directory called  ".lightning-format"
+ # Copy "lformat-prefs.txt" to /home/username/.lightning-format/
+==Manual Installation (all users)==
+ # Copy "lightning-format" to /usr/bin/
+ # Make the directory "/etc/lightning-tools/"
+ # Copy "lformat-prefs.txt" to /etc/lightning-tools/
+ # Navigate to /etc
+ # Create file called "lightning-format.conf"
+ # Open the file and type the exact path to the prefs file (ie. "/etc/lighting-tools/lformat-prefs.txt")
+==Bonus==
+ # To add the "Open in Terminal" right click menu entry (not required but extremely usefull!), open a  terminal window and type:  "sudo apt-get install nautilus-open-terminal"
+==Tips==
+ * lightning-format will always use the prefs file in the current  directory if it exists.
+ * You can move the default prefs file to any location. Just edit  the lightning-format.conf file located in "/etc" or  "~/.lightning-format" so that it has the exact path.
+
+
+--------------------------------------------------------------------------
+=Installation Instructions - Windows=
+--------------------------------------------------------------------------
+ # Install linux.
+ # Follow the linux instructions (above).
+==Easy Instructions==
+ # Decide that you are too stuborn to upgrade to linux.
+ # Open the windows folder and run the either "SETUP_XP.bat" for systems up to windows XP "SETUP_7.bat" for windows vista and above
+==Manual Installation==
+ # Use easy instructions (above)
+==Bonus==
+ # To add the ability to open CMD from any menu  (not required but extremely usefull!), open the file "OpenCommandPrompt.reg" and select yes.
+
+
+

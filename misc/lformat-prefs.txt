@@ -1,0 +1,19 @@
+//Preference file for Lightning-format
+
+//program prefs
+same_file=1 //save formatted version in same file
+create_backup=1 //create a backup file of unformatted
+verbose=0 //output what it is doing to the screen
+
+//style prefs
+inline_curly=0 //curly braces in line with control statement
+start_tabs=0 //how far to start indenting at
+convert_comments=0 //changes one line comment to multi-line style
+tabs_to_spaces=0 //use spaces instead of tabs. 0=false, nonezero is number of spaces to replace with
+
+//removal prefs
+remove_blank=0 //removes extra lines
+remove_comments=0 //removes comments entirely
+remove_tabs=0 //removes all tabs
+remove_endln=0 //everything on one line. Sets convert_comments, remove_lines, and remove_tabs to 1 (true)
+
